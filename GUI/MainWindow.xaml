@@ -1,0 +1,39 @@
+﻿<Window x:Class="GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="Client" SizeToContent="WidthAndHeight" >
+    <Grid>
+        <Canvas x:Name="C" Height="60" Width="300">
+            <TextBlock x:Name="iplbl" Canvas.Left="10" Canvas.Top="10">
+                <Italic>
+                    <Bold>
+                        ip:
+                    </Bold>
+                </Italic>
+            </TextBlock>
+            <TextBlock x:Name="portlbl" Canvas.Left="10" Canvas.Top="30">
+                <Italic>
+                    <Bold>
+                        port:
+                    </Bold>
+                </Italic>
+            </TextBlock>
+            <TextBox x:Name="ipbox" Canvas.Left="50" Canvas.Top="10" Width="100" Text="loop back"/>
+            <TextBox x:Name="portbox" Canvas.Left="50" Canvas.Top="30" Width="100" Text="5050"/>
+            <Button x:Name="conect" Content="connect" Canvas.Top="15" Canvas.Left="160" Width="70" Height="25" Click="conect_Click"/>
+            <TextBlock x:Name="status" Canvas.Left="20" Canvas.Top="6" FontSize="30" IsEnabled="False" Visibility="Hidden">
+                <Italic>
+                    <Bold>
+                        status:
+                    </Bold>
+                </Italic>
+            </TextBlock>
+            <TextBlock x:Name="fok" Canvas.Left="10" Canvas.Top="40" Text="fork" IsEnabled="False" Visibility="Hidden"/>
+            <TextBlock x:Name="namelbl" Canvas.Left="10" Canvas.Top="10" IsEnabled="False" Visibility="Hidden"/>
+        </Canvas>
+    </Grid>
+</Window>
